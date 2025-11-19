@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FocusFlow</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>FocusFlow</h1>
+
+    <section id="tasks-section">
+      <h2>Tasks</h2>
+      <div class="add-row">
+        <input id="new-task" placeholder="Add a task..." />
+        <button id="add-task-btn">Add</button>
+      </div>
+      <ul id="tasks-list"></ul>
+    </section>
+
+    <section id="timer-section">
+      <h2>Pomodoro</h2>
+      <div id="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn">Pause</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <div class="timer-meta">
+        <span id="mode-label">Mode: Work</span>
+        <span id="pomodoro-count">Pomodoros: 0</span>
+      </div>
+    </section>
+
+    <section id="blocker-section">
+      <h2>Blocker</h2>
+      <div class="add-row">
+        <input id="new-domain" placeholder="example.com" />
+        <button id="add-domain-btn">Block</button>
+      </div>
+      <ul id="blocked-list"></ul>
+      <a id="open-options" href="#">Options</a>
+    </section>
+
+    <section id="stats-section">
+      <h2>Stats</h2>
+      <div>Tasks completed today: <span id="stat-tasks">0</span></div>
+      <div>Pomodoros today: <span id="stat-pomos">0</span></div>
+    </section>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
